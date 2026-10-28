@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Verdades · Óbito Proibido Chorar · Ficha Entrou — 11 a 15 de Novembro 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--night:#1a1d38;--night2:#252952;--curtain:#8c1d2f;--gold:#f3c969;--chalk:#f1eadb;--teal:#2c7a7b;
+--display:'Big Shoulders Display','Arial Narrow',Impact,sans-serif;--body:'Instrument Sans','Segoe UI',system-ui,sans-serif;
+box-sizing:border-box;color-scheme:dark;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:calc(60px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;overflow-x:clip;background:var(--night);color:var(--chalk);font:400 1.0625rem/1.6 var(--body)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--night);z-index:60}
+a{color:inherit}:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:rgba(26,29,56,.93);backdrop-filter:blur(8px);border-bottom:1px solid rgba(241,234,219,.15)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font:900 1.2rem/1 var(--display);letter-spacing:.06em;text-decoration:none}
+nav{display:flex;gap:22px;align-items:center;font-weight:500;font-size:.95rem}
+nav a{text-decoration:none;opacity:.8}nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
+nav .cta{background:var(--gold);color:var(--night);padding:8px 16px;border-radius:999px;font-weight:600;opacity:1}
+@media(max-width:640px){nav{gap:14px;font-size:.9rem}.brand{font-size:1.05rem}}@media(max-width:400px){nav a:not(.cta){display:none}}
+.btn{display:inline-block;border:2px solid var(--gold);background:var(--gold);color:var(--night);font:600 1rem var(--body);padding:11px 24px;border-radius:999px;text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:inherit;border-color:currentColor}.btn:hover{filter:brightness(1.1)}
+
+/* cortina */
+.curtain{position:fixed;inset:0;z-index:70;display:flex;pointer-events:none}
+.curtain i{flex:1;background:repeating-linear-gradient(90deg,#8c1d2f 0 36px,#6e1424 36px 72px);transition:transform 1.5s cubic-bezier(.7,0,.2,1) .35s}
+.curtain i:first-child{transform-origin:left}.curtain i:last-child{transform-origin:right}
+.curtain.open i:first-child{transform:translateX(-101%)}.curtain.open i:last-child{transform:translateX(101%)}
+
+/* abertura */
+.intro{padding:56px 0 28px}
+.when{display:flex;flex-wrap:wrap;gap:12px 36px;align-items:flex-end;justify-content:space-between;margin-bottom:28px}
+.when h1{font:900 clamp(3rem,10vw,7.5rem)/.88 var(--display);text-transform:uppercase;margin:0}
+.when p{margin:0;max-width:34ch;opacity:.8}
+.count{display:flex;gap:10px}
+.count div{background:var(--night2);border-radius:8px;padding:10px 14px;text-align:center;min-width:72px}
+.count b{display:block;font:900 2.4rem/1 var(--display)}.count span{font-size:.8rem;opacity:.7}
+.count-wrap{display:flex;flex-direction:column;gap:8px}.count-wrap small{opacity:.75}
+
+/* tríptico */
+.tri{display:flex;height:min(78svh,680px);min-height:520px;gap:6px}
+.panel{position:relative;flex:1;border-radius:8px;overflow:hidden;display:flex;transition:flex .7s cubic-bezier(.6,0,.2,1);cursor:pointer;outline-offset:-4px}
+.panel.on{flex:4.2;cursor:default}
+.panel[data-p=verdades]{background:var(--chalk);color:var(--night)}
+.panel[data-p=obito]{background:var(--curtain);color:var(--chalk)}
+.panel[data-p=ficha]{background:var(--teal);color:#fff}
+.vt{flex:0 0 clamp(88px,11vw,150px);display:flex;align-items:flex-end;justify-content:center;padding:20px 8px}
+.vt h2{margin:0;font:900 clamp(2.4rem,min(6.2vw,8.5svh),5.4rem)/.85 var(--display);text-transform:uppercase;writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap}
+.detail{flex:1;min-width:300px;padding:30px 28px 28px 8px;display:flex;flex-direction:column;justify-content:flex-end;gap:14px;opacity:0;transform:translateX(16px);transition:opacity .4s,transform .5s;pointer-events:none}
+.panel.on .detail{opacity:1;transform:none;pointer-events:auto;transition-delay:.3s}
+.detail .tag{font:800 clamp(1.7rem,3vw,2.6rem)/1.05 var(--display);text-transform:uppercase;margin:0;max-width:16ch}
+.detail p{margin:0;max-width:44ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.chips li{border:1.5px solid currentColor;border-radius:6px;padding:3px 11px;font-weight:600;font-size:.92rem}
+.detail .btn{align-self:flex-start;background:currentColor;border-color:currentColor}
+.detail .btn span{color:var(--bg)}
+.panel[data-p=verdades]{--bg:var(--chalk)}.panel[data-p=obito]{--bg:var(--curtain)}.panel[data-p=ficha]{--bg:var(--teal)}
+@media(max-width:760px){
+ .tri{flex-direction:column;height:auto;min-height:0}
+ .panel{flex:none;height:auto;max-height:84px;flex-direction:column;transition:max-height .6s cubic-bezier(.6,0,.2,1)}
+ .panel.on{max-height:760px}
+ .vt{flex:none;justify-content:flex-start;align-items:center;padding:14px 20px;height:84px}
+ .vt h2{writing-mode:horizontal-tb;transform:none;font-size:clamp(1.6rem,7.6vw,2.6rem)}
+ .detail{flex:none;min-width:0;padding:0 20px 22px}
+}
+
+section{padding:84px 0}
+h3.sec{font:900 clamp(2rem,5vw,3.4rem)/1 var(--display);text-transform:uppercase;margin:0 0 10px}
+.lead{max-width:60ch;opacity:.8;margin:0 0 32px}
+
+/* apoio ao teatro */
+.apoio{padding:64px 0;border-top:3px solid var(--gold);border-bottom:3px solid var(--gold)}
+.apoio p{margin:0 0 16px;max-width:36ch;font-size:clamp(1.25rem,2.8vw,1.8rem);line-height:1.35}
+#apoioInfo{font-weight:600}
+#apoioInfo:empty,#apoioAcao:empty{display:none}
+
+/* programa */
+.band{background:var(--night2)}
+.days{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:22px}
+.day{font:inherit;color:inherit;background:var(--night);border:2px solid transparent;border-radius:8px;padding:12px 4px;cursor:pointer;text-align:center}
+.day b{display:block;font:900 2.3rem/1 var(--display)}.day span{font-size:.85rem;opacity:.75}
+.day[aria-selected=true]{border-color:var(--gold)}
+.sess{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.sess li{display:flex;gap:20px;align-items:center;background:var(--night);padding:18px 20px;border-radius:8px;border-left:8px solid var(--c)}
+.sess time{font:900 2.1rem/1 var(--display);min-width:3.6ch}
+.sess strong{font:900 1.5rem/1.1 var(--display);text-transform:uppercase;flex:1}
+.sess .btn{padding:8px 18px;font-size:.9rem}
+@media(max-width:560px){.sess li{flex-wrap:wrap;gap:8px 16px}.sess strong{flex-basis:calc(100% - 6ch)}}
+
+/* reservas + bilhete */
+.resgrid{display:grid;gap:40px;grid-template-columns:1fr;align-items:start}
+@media(min-width:900px){.resgrid{grid-template-columns:1fr 1fr}}
+form{display:grid;gap:16px;max-width:520px}
+label{display:grid;gap:6px;font-weight:600}
+input,select{font:inherit;color:var(--chalk);background:var(--night2);border:1.5px solid rgba(241,234,219,.4);border-radius:8px;padding:12px 14px;width:100%}
+.err{color:#ffb4a8;min-height:1.4em;margin:0}
+.ticket{display:flex;border-radius:12px;overflow:hidden;background:var(--bg,var(--chalk));color:var(--fg,var(--night));transition:background .4s,color .4s;position:relative;min-height:230px}
+.ticket .main{flex:1;padding:24px;display:flex;flex-direction:column;justify-content:space-between;gap:16px}
+.ticket .main h4{font:900 clamp(2rem,4.5vw,3rem)/.95 var(--display);text-transform:uppercase;margin:0}
+.ticket dl{display:grid;grid-template-columns:auto auto;gap:4px 24px;margin:0;font-size:.95rem;justify-content:start}
+.ticket dt{opacity:.7}.ticket dd{margin:0;font-weight:600}
+.ticket .stub{width:var(--stub,92px);border-left:3px dashed currentColor;display:flex;align-items:center;justify-content:center}
+.ticket .stub b{writing-mode:vertical-rl;font:900 2rem/1 var(--display);text-transform:uppercase;letter-spacing:.08em}
+.ticket::before,.ticket::after{content:"";position:absolute;right:calc(var(--stub,92px) - 11px);width:22px;height:22px;border-radius:50%;background:var(--night)}
+.ticket::before{top:-11px}.ticket::after{bottom:-11px}
+.out{margin-top:20px;border:1.5px dashed var(--gold);border-radius:8px;padding:18px;display:none;white-space:pre-line}
+.out.on{display:block}.out .btn{margin-top:12px}
+footer{padding:40px 0;border-top:1px solid rgba(241,234,219,.15);font-size:.95rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 40px;justify-content:space-between}
+@media(max-width:480px){.ticket{--stub:64px}.ticket .stub b{font-size:1.5rem}.ticket .main{padding:18px}.count div{min-width:64px;padding:8px 10px}.count b{font-size:2rem}section{padding:60px 0}.sess time{font-size:1.8rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.curtain{display:none}.panel,.detail{transition:none}}
+</style>
+</head>
+<body>
+<div class="curtain" id="curtain" aria-hidden="true"><i></i><i></i></div>
+
+<header><div class="wrap">
+  <a class="brand" href="#topo">TEATRO · NOV 2026</a>
+  <nav aria-label="Principal"><a href="#programa">Programa</a><a href="#reservas" class="cta">Reservar lugar</a></nav>
+</div></header>
+
+<main id="topo">
+  <div class="wrap intro">
+    <div class="when">
+      <h1>11 a 15<br>Novembro 2026</h1>
+      <div class="count-wrap">
+        <div class="count" id="count" aria-live="off"></div>
+        <small id="countNote"></small>
+      </div>
+    </div>
+    <p class="lead" style="margin-bottom:20px">Horizonte Njinga Mbande. Três peças em cinco noites. Escolha uma para ver as sessões.</p>
+    <div class="tri" id="tri"></div>
+  </div>
+
+  <section id="apoio" class="apoio" aria-labelledby="apoioT">
+    <div class="wrap">
+      <h3 class="sec" id="apoioT">Sem apoio. Sem sala.</h3>
+      <p>O Horizonte Njinga Mbande faz teatro sem apoio e sem sala. Não deixe isto acabar. Ajude o teatro a manter-se.</p>
+      <p id="apoioInfo"></p>
+      <div id="apoioAcao"></div>
+    </div>
+  </section>
+
+  <section id="programa" class="band">
+    <div class="wrap">
+      <h3 class="sec">Programa</h3>
+      <p class="lead">Escolha o dia para ver as sessões.</p>
+      <div class="days" role="tablist" aria-label="Dias" id="days"></div>
+      <ul class="sess" id="sess" aria-live="polite"></ul>
+    </div>
+  </section>
+
+  <section id="reservas">
+    <div class="wrap resgrid">
+      <div>
+        <h3 class="sec">Reservar lugar</h3>
+        <p class="lead">Preencha os dados e o seu bilhete é preparado ao lado.</p>
+        <form id="form" novalidate>
+          <label>Nome<input id="nome" autocomplete="name"></label>
+          <label>Peça<select id="peca"></select></label>
+          <label>Sessão<select id="sessao"></select></label>
+          <label>Número de lugares<input id="qtd" type="number" min="1" max="10" value="1" inputmode="numeric"></label>
+          <p class="err" id="err" role="alert"></p>
+          <button class="btn" type="submit">Enviar pedido</button>
+        </form>
+        <div class="out" id="out" tabindex="-1"></div>
+      </div>
+      <div class="ticket" id="ticket" aria-label="Pré-visualização do bilhete">
+        <div class="main">
+          <h4 id="tTitle"></h4>
+          <dl>
+            <dt>Nome</dt><dd id="tNome">—</dd>
+            <dt>Dia</dt><dd id="tDia"></dd>
+            <dt>Hora</dt><dd id="tHora"></dd>
+            <dt>Lugares</dt><dd id="tQtd"></dd>
+            <dt>Local</dt><dd id="tLocal"></dd>
+          </dl>
+        </div>
+        <div class="stub"><b>Entrada</b></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">
+  <span>Horizonte Njinga Mbande · Verdades · Óbito Proibido Chorar · Ficha Entrou</span>
+  <span id="fLocal"></span>
+  <span>11 a 15 de Novembro de 2026</span>
+</div></footer>
+
+<script>
+/* ===== EDITE AQUI ===== */
+const VENUE = "";      // ex.: "Cine Teatro Avenida, Luanda"
+const APOIO_INFO = ""; // como ajudar, ex.: "Para ajudar, ligue 9XX XXX XXX." (vazio = não aparece)
+const WHATSAPP = "";   // ex.: "244923000000" (indicativo, sem +). Vazio = copiar mensagem
+const PLAYS = [
+ {id:"verdades",cls:"verdades",title:"Verdades",color:"#f1eadb",fg:"#1a1d38",tag:"Dizer tudo tem um preço. Calar também.",desc:""},
+ {id:"obito",cls:"obito",title:"Óbito Proibido Chorar",color:"#8c1d2f",fg:"#f1eadb",tag:"Há lutos sem licença para chorar.",desc:""},
+ {id:"ficha",cls:"ficha",title:"Ficha Entrou",color:"#2c7a7b",fg:"#ffffff",tag:"O jogo começa quando a ficha entra.",desc:""}
+];
+const DAYS=[{d:11,w:"Qua"},{d:12,w:"Qui"},{d:13,w:"Sex"},{d:14,w:"Sáb"},{d:15,w:"Dom"}];
+const SESSIONS=[{d:11,t:"19:00",p:"verdades"},{d:12,t:"19:00",p:"obito"},{d:13,t:"19:00",p:"ficha"},
+ {d:14,t:"16:00",p:"verdades"},{d:14,t:"19:30",p:"obito"},{d:15,t:"16:00",p:"ficha"},{d:15,t:"18:30",p:"obito"}];
+const START=new Date(2026,10,11,0,0,0), END=new Date(2026,10,16,0,0,0);
+/* ======================= */
+const $=id=>document.getElementById(id), play=id=>PLAYS.find(p=>p.id===id), lab=s=>`${s.d} Nov, ${s.t}`;
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const local=VENUE||"—";
+$("fLocal").textContent=VENUE;
+$("apoioInfo").textContent=APOIO_INFO;
+if(WHATSAPP){const a=document.createElement("a");a.className="btn";a.target="_blank";a.rel="noopener";a.textContent="Quero ajudar";a.href="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent("Olá! Quero ajudar o Horizonte Njinga Mbande a manter o teatro.");$("apoioAcao").append(a)}
+
+/* cortina */
+if(!reduce){setTimeout(()=>$("curtain").classList.add("open"),60);setTimeout(()=>$("curtain").remove(),2200)}
+
+/* tríptico */
+$("tri").innerHTML=PLAYS.map((p,i)=>{
+ const ch=SESSIONS.filter(s=>s.p===p.id).map(s=>`<li>${lab(s)}</li>`).join("");
+ return `<article class="panel${i===0?" on":""}" data-p="${p.cls}" data-id="${p.id}" tabindex="0" aria-expanded="${i===0}">
+  <div class="vt"><h2>${p.title}</h2></div>
+  <div class="detail"><p class="tag">${p.tag}</p>${p.desc?`<p>${p.desc}</p>`:""}<ul class="chips" aria-label="Sessões">${ch}</ul>
+  <a class="btn" href="#reservas" data-reserve="${p.id}"><span>Reservar esta peça</span></a></div></article>`}).join("");
+const panels=[...document.querySelectorAll(".panel")];
+function openPanel(el){panels.forEach(p=>{const on=p===el;p.classList.toggle("on",on);p.setAttribute("aria-expanded",on)})}
+panels.forEach(p=>{
+ p.addEventListener("click",()=>openPanel(p));
+ p.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target===p){e.preventDefault();openPanel(p)}});
+ p.addEventListener("focusin",()=>openPanel(p));
+});
+if(matchMedia("(hover:hover) and (min-width:761px)").matches)panels.forEach(p=>p.addEventListener("mouseenter",()=>openPanel(p)));
+
+/* contagem */
+function tick(){
+ const n=new Date();let ms=START-n;
+ if(n>=END){$("count").innerHTML="";$("countNote").textContent="As três peças já passaram. Obrigado por vir.";return}
+ if(ms<=0){$("count").innerHTML="";$("countNote").textContent="Em cena até dia 15. Reserve o seu lugar.";return}
+ const d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5),m=Math.floor(ms%36e5/6e4);
+ $("count").innerHTML=[[d,"dias"],[h,"horas"],[m,"min"]].map(x=>`<div><b>${x[0]}</b><span>${x[1]}</span></div>`).join("");
+ $("countNote").textContent="Faltam para a primeira noite";
+}
+tick();setInterval(tick,30000);
+
+/* programa */
+let cur=11;
+function renderDays(){
+ $("days").innerHTML=DAYS.map(x=>`<button class="day" role="tab" aria-selected="${x.d===cur}" data-d="${x.d}"><b>${x.d}</b><span>${x.w}</span></button>`).join("");
+ $("sess").innerHTML=SESSIONS.filter(s=>s.d===cur).map(s=>{const p=play(s.p);
+  return `<li style="--c:${p.color}"><time>${s.t}</time><strong>${p.title}</strong><a class="btn" href="#reservas" data-reserve="${s.p}" data-s="${s.d}|${s.t}">Reservar</a></li>`}).join("")||"<li>Sem sessões neste dia.</li>";
+}
+$("days").addEventListener("click",e=>{const b=e.target.closest(".day");if(!b)return;cur=+b.dataset.d;renderDays();$("days").querySelector('[aria-selected="true"]').focus()});
+renderDays();
+
+/* reservas */
+$("peca").innerHTML=PLAYS.map(p=>`<option value="${p.id}">${p.title}</option>`).join("");
+function fillSess(pref){
+ $("sessao").innerHTML=SESSIONS.filter(s=>s.p===$("peca").value).map(s=>`<option value="${s.d}|${s.t}">${lab(s)}</option>`).join("");
+ if(pref)$("sessao").value=pref;ticket();
+}
+function ticket(){
+ const p=play($("peca").value),[d,t]=$("sessao").value.split("|"),q=parseInt($("qtd").value,10);
+ $("ticket").style.setProperty("--bg",p.color);$("ticket").style.setProperty("--fg",p.fg);
+ $("tTitle").textContent=p.title;$("tNome").textContent=$("nome").value.trim()||"—";
+ $("tDia").textContent=`${d} de Novembro de 2026`;$("tHora").textContent=t;
+ $("tQtd").textContent=q>=1?q:"—";$("tLocal").textContent=local;
+}
+$("peca").addEventListener("change",()=>fillSess());
+["sessao","nome","qtd"].forEach(i=>$(i).addEventListener("input",ticket));
+fillSess();
+document.addEventListener("click",e=>{const a=e.target.closest("[data-reserve]");if(!a)return;$("peca").value=a.dataset.reserve;fillSess(a.dataset.s)});
+$("form").addEventListener("submit",e=>{
+ e.preventDefault();
+ const nome=$("nome").value.trim(),q=parseInt($("qtd").value,10);
+ if(!nome){$("err").textContent="Escreva o seu nome para continuar.";$("nome").focus();return}
+ if(!(q>=1&&q<=10)){$("err").textContent="Escolha entre 1 e 10 lugares.";$("qtd").focus();return}
+ $("err").textContent="";
+ const p=play($("peca").value),[d,t]=$("sessao").value.split("|");
+ const msg=`Olá! Quero reservar ${q} ${q>1?"lugares":"lugar"} para "${p.title}", dia ${d} de Novembro de 2026, às ${t}. Nome: ${nome}.`;
+ const o=$("out");
+ if(WHATSAPP){o.innerHTML=`<strong>Pedido pronto.</strong><br>${msg}<br><a class="btn" href="https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}" target="_blank" rel="noopener">Enviar por WhatsApp</a>`}
+ else{o.innerHTML=`<strong>Pedido pronto. Copie a mensagem e envie-a à organização.</strong><br>${msg}<br><button class="btn" type="button" id="copy">Copiar mensagem</button>`;
+  $("copy").onclick=async()=>{try{await navigator.clipboard.writeText(msg);$("copy").textContent="Mensagem copiada"}catch{$("copy").textContent="Não foi possível copiar. Selecione o texto acima."}}}
+ o.classList.add("on");o.focus();
+});
+</script>
+</body>
+</html>
